@@ -8,6 +8,8 @@ templateEngineOverride: njk, md
 Blog Posts:
 <ul>
 {% for post in collections.posts | reverse %}
-    <li><a href="{{ post.url }}">{{post.data.title }}</a></li>
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }} - <time>{{ post.date | dateFilter }}</time></a>
+  </li>
 {% endfor %}
 </ul>
