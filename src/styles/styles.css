@@ -1,0 +1,50 @@
+:root {
+    /* Color variables */
+    --primary-color: #f8f5f0;
+      --accent-color: #b89f7a;
+      --text-color: #2c2c2c;
+      --shadow-color: rgba(0,0,0,0.1);
+      --transition-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      
+
+    /* Default theme variables */
+    --text: var(--text-color);
+    --bg: var(--primary-color);
+}
+
+@font-face {
+  font-family: 'Special Elite'; 
+  src: url('/assets/fonts/SpecialElite-Regular.ttf') format('ttf'); 
+}
+
+.bg-pattern {
+  --bg: #fedbbe;
+  --fg: #fccaa9;
+  --size: 15px;
+  --line: 1.5px;
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 calc(var(--size) - var(--line) - 1px), var(--fg) calc(var(--size) - var(--line)) var(--size)),
+    repeating-linear-gradient(-45deg, transparent 0 calc(var(--size) - var(--line) - 1px), var(--fg) calc(var(--size) - var(--line)) var(--size));
+}
+
+
+
+
+html, body {
+    height: 100%; margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Special Elite', "Open Sans", "Droid Sans", "Calibri", sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
